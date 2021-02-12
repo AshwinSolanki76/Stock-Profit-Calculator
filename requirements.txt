@@ -12,8 +12,6 @@ itsdangerous
 Jinja2 
 lxml 
 MarkupSafe 
-mkl-fft
-mkl-service
 numpy 
 pandas 
 pandas-datareader 
