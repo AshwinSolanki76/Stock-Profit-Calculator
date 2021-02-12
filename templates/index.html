@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form action = "{{url_for('templates',result.html)}}" method = "POST">
+        <form action = "{{ url_for('templates','result.html' )}}" method = "POST">
             <p>Stock Symbol <input type = "text" name = "StockName" placeholder="Stock Symbol"></p>
             <p>Amount <input type = "text" name = "Capital" placeholder="Amount you wish to put in"></p>
             <p>Date <input type = "date" name = "Date" /></p>
