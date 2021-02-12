@@ -12,7 +12,7 @@ itsdangerous
 Jinja2 
 lxml 
 MarkupSafe 
-mkl-fft==1.0.6
+mkl-fft
 mkl-service==2.3.0
 numpy 
 pandas 
