@@ -28,4 +28,3 @@ Werkzeug
 win-inet-pton
 wincertstore==0.2
 mkl-fft==1.0.6
-mkl-service==1
