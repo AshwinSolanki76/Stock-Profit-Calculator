@@ -13,7 +13,7 @@ Jinja2
 lxml 
 MarkupSafe 
 mkl-fft
-mkl-service==2.3.0
+mkl-service
 numpy 
 pandas 
 pandas-datareader 
