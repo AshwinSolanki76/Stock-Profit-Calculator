@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    
+
+
+    <div class='container'>
+        <h4>If You had invested {{result['Capital']}} amount in {{result['StockName']}}
+            on {{result['date']}} then You would have {{result['Profit']}}
+        </h4>
+        
+    </div>
+
+</body>
+    <style>
+        .container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background-color:rgb(202, 202, 202);
+            border-radius: 20px;
+            padding: 30px;
+            font-size: 50px;
+        }
+    </style>
+</html>
