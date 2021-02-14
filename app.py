@@ -15,7 +15,8 @@ def result():
         name={}
         for key, value in request.form.items():
             name[ key ] = value
-         
+
+
         result = request.form
         d=result.to_dict(flat=False)
         datee=datetime(*[int(i) for i in d['Date'][0].split('-')])

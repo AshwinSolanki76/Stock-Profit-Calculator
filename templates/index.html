@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <form action="{{ url_for('result') }}" method = "POST">
-            <p>Stock Symbol <input type = "text" name = "StockName" placeholder="Stock Symbol"></p>
-            <p>Amount <input type = "text" name = "Capital" placeholder="Amount you wish to put in"></p>
+            <p>Stock Symbol <input type = "text" name = "StockName" placeholder="Enter Stock Symbol"></p>
+            <p>Amount <input type = "text" name = "Capital" placeholder="Enter Amount you wish to put in"></p>
             <p>Date <input type = "date" name = "Date" /></p>
             <div>
                 <p><input class="Button" type = "submit" value = "Calculate" /></p>
@@ -22,6 +22,7 @@
     </div>
 </body>
 <style>
+
 .BottomBar{
     position:relative;
     bottom: 0px;
@@ -38,6 +39,7 @@ a{
 }
 .container{
     position: absolute;
+    width: 70%;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
