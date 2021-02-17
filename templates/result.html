@@ -7,48 +7,172 @@
     <title>Result</title>
 </head>
 <body>
-    <div class='container'>
-        <p>
-            If You had invested {{result['Capital']}} amount in {{result['StockName']}}
-            on {{result['Date']}} then You would have {{result['Profit']}}
-        </p>
-    </div>
+    <table class="container">
+        <tbody>
+            <tr>
+                <td>Stock Name</td>
+                <td>{{result['StockName']}}</td>
+            </tr>
+            <tr>
+                <td>Investment</td>
+                <td>{{result['Capital']}}</td>
+            </tr>
+            <tr>
+                <td>Date (then)</td>
+                <td>{{result['Date']}}</td>
+            </tr>
+            <tr>
+                <td>Date (now)</td>
+                <td>BAKI</td>
+            </tr>
+            <tr>
+                <td>Price (then)</td>
+                <td>{{result['PriceThen']}}</td>
+            </tr>
+            <tr>
+                <td>Price (now)</td>
+                <td>{{result['PriceNow']}}</td>
+            </tr>
+            <tr>
+                <td>Profit</td>
+                <td>{{result['Profit']}}</td>
+            </tr>
+            <tr>
+                <td>% Change</td>
+                {% if result['Growth']>0 %}
+                <td class='P'>
+                    &uarr; {{result['Growth']}} %
+                </td>
+                {% else %}
+                <td class='L'>
+                    &darr; {{result['Growth']}} %
+                </td>
+                {% endif %}
+            </tr>
+        </tbody>
+    </table>
+
+
 
 </body>
-    <style>
-        .container{
-            /* margin: 10px;
-            width: 80%;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            justify-content: center;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-55%, -50%);
-            background-color:rgb(202, 202, 202);
-            border-radius: 20px;
-            padding: 10px;
-            font-size: 430px; */
 
-            /* width: 100px;
-            height: 100px; */
-            width: 80%;
-            height: fit-content;
-            max-width: 320px;
-            background-color: rgb(202, 202, 202);
+<style>
+    
+    @charset "UTF-8";
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+    .P{
+        color:greenyellow;
+    }
+    .L{
+        color:#FB667A;
+    }
 
-            border-radius: 20px;
-            padding: 10px;
-            position: absolute;
-            top:0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            
-            margin: auto;
-        }
-        p{
-            font-size: min(13vw,50px);
-        }
-    </style>
+    body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.42em;
+    color:#A7A1AE;
+    background-color:#1F2739;
+    }
+    
+    h1 {
+    font-size:3em; 
+    font-weight: 300;
+    line-height:1em;
+    text-align: center;
+    color: #4DC3FA;
+    }
+    
+    h2 {
+    font-size:1em; 
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    line-height:1em;
+    padding-bottom: 2em;
+    color: #FB667A;
+    }
+    
+    h2 a {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FB667A;
+    text-decoration: none;
+    }
+    
+    .blue { color: #185875; }
+    .yellow { color: #FFF842; }
+    
+    .container th h1 {
+        font-weight: bold;
+        font-size: 1em;
+        text-align: left;
+        color: #185875;
+    }
+    
+    .container td {
+        font-weight: normal;
+        font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+            -moz-box-shadow: 0 2px 2px -2px #0E1119;
+                box-shadow: 0 2px 2px -2px #0E1119;
+    }
+    
+    .container {
+        text-align: left;
+        overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+    }
+    
+    .container td, .container th {
+        padding-bottom: 2%;
+        padding-top: 2%;
+    padding-left:2%;  
+    }
+    
+    /* Background-color of the odd rows */
+    .container tr:nth-child(odd) {
+        background-color: #323C50;
+    }
+    
+    /* Background-color of the even rows */
+    .container tr:nth-child(even) {
+        background-color: #2C3446;
+    }
+    
+    .container th {
+        background-color: #1F2739;
+    }
+    
+    .container td:first-child { color: #FB667A; }
+    
+    .container tr:hover {
+        background-color: #464A52;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+            -moz-box-shadow: 0 6px 6px -6px #0E1119;
+                box-shadow: 0 6px 6px -6px #0E1119;
+    }
+    
+    .container td:hover {
+    background-color: #FFF842;
+    color: #403E10;
+    font-weight: bold;
+    
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    
+    transition-delay: 0s;
+        transition-duration: 0.4s;
+        transition-property: all;
+    transition-timing-function: line;
+    }
+    
+    @media (max-width: 800px) {
+    .container td:nth-child(4),
+    .container th:nth-child(4) { display: none; }
+    }
+</style>
 </html>
